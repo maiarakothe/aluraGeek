@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+:root {
+    --violeta: #5300C8;
+    --azul: #03318C;
+    --branco: #E5E5E5;
+    --letra: 'Press Start 2P', sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: var(--violeta);
+    font-family: 'Press Start 2P', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 4px solid grey;
+}
+
+.titulo {
+    color: var(--branco);
+    font-family: 'Press Start 2P', sans-serif;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px;
+}
+
+h1 {
+    font-family: var(--letra);
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+}
+
+/*----------------------- */
+
+.secao__produtos {
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*----------------------- */
+
+.secao__formulario {
+    
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+input {
+    border: 2px solid var(--azul);
+    color: var(--azul);
+    font-size: 16px;
+    font-family: "IBM Plex Mono";
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+    height: 100%;
+}
+
+::placeholder {
+    color: var(--azul)
+}
+
+.formulario__botao {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+button {
+    width: 35%;
+    font-size: 20px;
+    font-family: "IBM Plex Mono";
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.formulario__botao--guardar {
+    border: 2px solid var(--azul);
+    background-color: var(--azul);
+    color: white;
+}
+
+.formulario__botao--limpar {
+    border: 2px solid var(--azul);
+    background-color: white;
+    color: var(--azul);
+}
+
+footer {
+    background-color: var(--violeta);
+    text-align: center;
+    padding: 20px;
+}
+
+.secao__footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer > p {
+    color: white;
+    font-size: 16px;
+    font-family: "IBM Plex Mono";
+    text-transform: uppercase;
+}
+
+@media  screen and (max-width: 769px) {
+    main {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .secao__formulario {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        padding-top: 50px;
+    }
+}
