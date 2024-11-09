@@ -18,13 +18,18 @@
     <main>
         <section class="secao__produtos">
             <h1>Meus produtos:</h1>
+            <ul data-lista>
+                <li class="produtos__item">
+
+                </li>
+            </ul>
         </section>
         <section class="secao__formulario">
             <h1>Adicionar produto:</h1>
-            <form action="">
-                <input type="text" name="nome" id="nome" placeholder="nome...">
-                <input type="number" name="valor" id="valor" placeholder="valor...">
-                <input type="url" name="imagem" id="imagem" placeholder="imagem...">
+            <form data-formulario>
+                <input type="text" name="nome" id="nome" placeholder="nome..." required data-nome>
+                <input type="number" name="valor" id="valor" placeholder="valor..." required data-valor>
+                <input type="url" name="imagem" id="imagem" placeholder="imagem..."  required data-imagem>
                 <div class="formulario__botao">
                     <button class="formulario__botao--guardar" type="submit">Guardar</button>
                     <button class="formulario__botao--limpar" type="reset">Limpar</button>
@@ -39,5 +44,8 @@
         </div>
         <p>Desenvolvido por Maiara Kothe</p>
     </footer>
+
+    <script src="/js/mostrarProdutos.js" type="module"></script>
+    <script src="/js/criarProduto.js" type="module"></script>
 </body>
 </html>

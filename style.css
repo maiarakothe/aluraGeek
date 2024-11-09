@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 :root {
@@ -11,6 +10,8 @@
     --branco: #E5E5E5;
     --letra: 'Press Start 2P', sans-serif;
 }
+
+/* HEADER */
 
 header {
     display: flex;
@@ -42,20 +43,105 @@ main {
     display: flex;
 }
 
-/*----------------------- */
+/* SEÇÃO PRODUTOS */
 
 .secao__produtos {
     width: 70%;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 50vh;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+    width: 15px; 
+}
+
+/* Cor do fundo da barra de rolagem */
+ul::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+}
+
+/* Cor e estilo da "polegar" da barra de rolagem */
+ul::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+    border: 2px solid #f1f1f1; 
+}
+
+/* Efeito ao passar o mouse na barra de rolagem */
+ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+.card {
+    width: 190px;
+    height: 260px;
+    background-color: var(--violeta);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card > img{
+    width: 180px;
+    height: 180px;
+    border: 2px solid black;
+    margin-top: 5px;
+    border-radius: 5px;
+    object-fit: cover;
+}
 
 
-/*----------------------- */
+.nome, .card-container--value > p{
+    font-family: "IBM Plex Mono";
+    color: white;
+    text-align: left;
+}
+
+.nome {
+    font-size: 1rem;
+    padding-left: 6px;
+}
+
+.card-container--value > p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-container--value {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.card-container--value img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* SEÇÃO FORMULÁRIO */
 
 .secao__formulario {
     
@@ -121,6 +207,8 @@ button {
     color: var(--azul);
 }
 
+/* FOOTER */
+
 footer {
     background-color: var(--violeta);
     text-align: center;
@@ -139,6 +227,8 @@ footer > p {
     text-transform: uppercase;
 }
 
+/* TELAS MENORES QUE 769px */
+
 @media  screen and (max-width: 769px) {
     main {
         flex-direction: column-reverse;
@@ -146,6 +236,28 @@ footer > p {
         align-items: center;
         text-align: center;
     }
+
+     /* SEÇÃO PRODUTOS */
+
+     .secao__produtos {
+        height: 100vh;
+        width: 50vh;
+    }
+
+    .secao__produtos > h1{
+        margin-bottom: 73px;
+    }
+
+    ul {
+        flex-wrap: nowrap;
+        max-height: 50%;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding-left: 10px;
+    }
+
+    /* SEÇÃO FORMULÁRIO */
 
     .secao__formulario {
         justify-content: center;
@@ -155,4 +267,5 @@ footer > p {
         height: 50%;
         padding-top: 50px;
     }
+
 }
