@@ -1,4 +1,4 @@
-# E-Commerce Project
+<h1 text-align="center"> E-Commerce Project</h1>
 
 Este projeto é um exemplo de e-commerce simples, onde os produtos são exibidos dinâmicamente com base em uma API falsa. 
 
