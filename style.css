@@ -60,6 +60,7 @@ ul {
     flex-wrap: wrap;
     gap: 30px;
     height: 50vh;
+    width: 100%; 
     justify-content: center;
     overflow-y: auto;
 }
@@ -227,7 +228,7 @@ footer > p {
     text-transform: uppercase;
 }
 
-/* TELAS MENORES QUE 769px */
+/* Telas para Tablet */
 
 @media  screen and (max-width: 769px) {
     main {
@@ -239,22 +240,23 @@ footer > p {
 
      /* SEÇÃO PRODUTOS */
 
-     .secao__produtos {
-        height: 100vh;
-        width: 50vh;
+     .secao__produtos > h1 {
+        padding-top: 50px;
     }
 
-    .secao__produtos > h1{
-        margin-bottom: 73px;
+     .secao__produtos {
+        height: auto;
+        width: 100%;
     }
 
     ul {
         flex-wrap: nowrap;
-        max-height: 50%;
+        max-height: 100vh;
         width: 100%;
+        justify-content: flex-start;
+        overflow-x: scroll;
         overflow-y: hidden;
-        overflow-x: auto;
-        padding-left: 10px;
+        padding: 20px;
     }
 
     /* SEÇÃO FORMULÁRIO */
@@ -266,6 +268,21 @@ footer > p {
         width: 100%;
         height: 50%;
         padding-top: 50px;
+    }
+
+}
+
+/* Tela para Celulares */
+
+@media  screen and (max-width: 414px) {
+    /* SEÇÃO PRODUTOS */
+
+    ul {
+        height: auto;
+        width: 100%; 
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll; /
     }
 
 }
